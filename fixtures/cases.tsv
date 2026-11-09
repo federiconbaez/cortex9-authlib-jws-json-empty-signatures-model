@@ -1,0 +1,8 @@
+id	kind	description
+p01_empty_list	pos	signatures=[]
+p02_null_signatures	pos	signatures=None: pre TypeError; post BadSignature (falsy guard)
+n01_one_valid	neg	one signature entry with signature field
+n02_one_invalid	neg	one entry missing signature field
+n03_mixed	neg	valid then invalid entry
+n04_missing_payload	neg	no payload
+n05_two_valid	neg	two signature entries

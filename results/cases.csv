@@ -1,0 +1,8 @@
+id,kind,pre,post,expected_pre,expected_post,ok,flips,description
+p01_empty_list,pos,VALID,BadSignature,VALID,BadSignature,True,True,signatures=[]
+p02_null_signatures,pos,TypeError,BadSignature,TypeError,BadSignature,True,True,signatures=None: pre TypeError; post BadSignature (falsy guard)
+n01_one_valid,neg,VALID,VALID,VALID,VALID,True,False,one signature entry with signature field
+n02_one_invalid,neg,BadSignature,BadSignature,BadSignature,BadSignature,True,False,one entry missing signature field
+n03_mixed,neg,BadSignature,BadSignature,BadSignature,BadSignature,True,False,valid then invalid entry
+n04_missing_payload,neg,Decode,Decode,Decode,Decode,True,False,no payload
+n05_two_valid,neg,VALID,VALID,VALID,VALID,True,False,two signature entries

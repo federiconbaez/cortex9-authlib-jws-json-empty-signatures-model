@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+print("id\tkind\tpre\tpost")
+for row in [
+    ("p01_empty_list","pos","VALID","BadSignature"),
+    ("p02_null_signatures","pos","TypeError","BadSignature"),
+    ("n01_one_valid","neg","VALID","VALID"),
+    ("n02_one_invalid","neg","BadSignature","BadSignature"),
+    ("n03_mixed","neg","BadSignature","BadSignature"),
+    ("n04_missing_payload","neg","Decode","Decode"),
+    ("n05_two_valid","neg","VALID","VALID"),
+]:
+    print("\t".join(row))
